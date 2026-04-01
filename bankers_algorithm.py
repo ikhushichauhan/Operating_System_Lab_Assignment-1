@@ -1,4 +1,5 @@
 # Task 1: System Input and Data Representation [cite: 372, 376]
+
 def bankers_algorithm():
     # Defining processes and resources [cite: 378]
     n_p = 3  
@@ -17,7 +18,9 @@ def bankers_algorithm():
         print(f"{processes[i]}\t{allocation[i]}\t{maximum[i]}\t{avail_str}")
 
     # Task 2: Need Matrix Calculation [cite: 385, 389]
+    
     # Formula: Need = Maximum - Allocation 
+    
     need = []
     for i in range(n_p):
         row = [maximum[i][j] - allocation[i][j] for j in range(n_r)]
@@ -29,6 +32,7 @@ def bankers_algorithm():
         print(f"{processes[i]}\t{need[i]}")
 
     # Task 3 & 4: Safety Algorithm & Safe Sequence [cite: 397, 411]
+    
     finish = [False] * n_p
     safe_seq = []
     work = list(available) # Work = Available 
